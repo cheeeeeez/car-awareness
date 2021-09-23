@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html dir= "ltr" lang= "ko" class>
+
+<head>
+    <meta charset="utf-8">
+<title> 검색엔진 </title>
+<style>
+    body {
+        background: #FFFFFF;
+        margin: 0;
+    }
+    #backgroundImage {
+        border: 100;
+        height: 100%;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        visibility: hidden;
+        width: 100%;
+    }
+   
+
+    [show-background-image] #backgroundImage {
+        visibility: visible;
+    }
+</style>
+<custom-style>
+    <style is="custom-style" css-build="shadow"></style>
+</custom-style>
+</head>
+<body style= "background-color: rgb(255,255,255);"> 
+    <iframe id="backgroundImage" src="chrome-untrusted://new-tab-page/custom background image?url=">
+    #document</iframe>
+<ntp-app>
+    #shadow-root  (open)
+</ntp-app>
+<script type="module" src="new tab page.js"></script>
+<link rel="stylesheet" href="chrome://resources/css/text defaults md.css">
+<link rel="stylesheet" href="shared vars.css">
+
+
+</body>
+
+<caption>
+    내가 사용하는 검색엔진
+</caption>
+<table border="1">
+    <tr>
+        <td>구글</td>
+        <td>후훗</td>
+        <td rowspan="2">1행 1열</td>
+     <tr>
+       
+        <td>네이버</td>
+        <td>후훗</td>
+    </tr>
+    
+    
+    <tr>
+       
+        <th colspan="3">카카오</th>
+    </tr>
+</table>
+
+</html>
