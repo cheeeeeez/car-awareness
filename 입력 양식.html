@@ -1,0 +1,94 @@
+<!-- 자바랑 비슷한 라디오 버튼, 체크박스...등등이 있는데, 복습 차원으로 다 올려놨으니 한 번씩 공부해주세요-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 회원가입 코드 </title>
+    </head>
+    <body>
+  <form action="input.jsp" method="post"> <!-- 입력양식은 항상 <form>으로 시작한다.--> <!-- action="" 큰 따옴표 안에 입력을 처리하는 서버 스크립트의 주소를 적어준다.-->
+    <!--method는 입력 데이터가 서버로 보내지는 방법을 기술한다. GET과 POST가 있다.-->
+    <!-- GET 방식은 간단하지만, 글자 수 제한, 비밀 보장X...등의 단점이 존재한다.
+    POST 방식은 길이 제한이 없으며, 보안이 유지되지만, 요청이 캐시되지 않고 브라우저 히스토리에도 남아있지 않으며, 북마크가 불가능하다.-->
+    이메일:    <input type="email" name="email"  /><br /> <!-- input 요소는 사용자로부터 정보를 받아들이는 용도로 사용된다. ++*type 속성을 변경하면 아주 다양한 형태가 나온다.-->
+    URL:      <input type="url" name= "url"  /><br />
+    전화번호: <input type="tel" name="tel" /><br />
+    색상:     <input type="color" name="color"  /><br />
+    월:       <input type="month" name="month"  /><br />
+    날짜:     <input type="date"  name="date" /><br />
+    주:       <input type="month" name="week" /><br />
+    시간:     <input type="time" name="time" /><br />
+
+    지역 시간: <input type="datetime-local" name="localdatetime" /><br />
+    숫자:     <input type="number" name="number" min="1" max="10" step="2" /><br />
+    범위:     <input type="range" name="range" min="1" max="10" step="2" /><br />
+    <input type="submit" >
+    <hr />
+
+    <input type="button" value="눌러보세요!" name="button1" /> <!-- type 속성은 입력 요소의 유형, value 속성은 입력 요소의 초기값,
+         name 속성은 입력 요소의 이름이며 서버로 변수의 이름처럼 전달-->
+    <hr />
+    이름: <input type="text" name="name"><br>
+    학번: <input type="text" name="number" size=10><br>
+    패스워드: <input type="password" name="pass"> <!-- 패스워드 필드를 정의하면 사용자가 입력한 글자는 보이지 않는다.-->
+    <hr /> 
+    <input type="radio" name="gender" value="male">남성
+    <input type="radio" name="gender" value="female">여성 <br><!-- 라디오버튼 예제-->
+    <hr />
+
+    과일 선택:
+    <input type="checkbox" name="fruits" value="apple" checked> Apple <!-- 체크박스 예제, checked를 입력시 체크박스에 체크가 된 상태로 출력-->
+    <input type="checkbox" name="fruits" value="grape" > Grape
+    <input type="checkbox" name="fruits" value="orange" > Orange <br>
+    <hr />
+    사용자 아이디:
+    <input type="text" name="user"> <br /> 
+    <input type="submit" value="제출"> <!-- 제출 버튼은 데이터를 서버로 전송하는 데 사용된다.-->
+    <input type="reset" value="초기화">
+    <!-- 사용자가 제출 버튼을 누르면 브라우저는 사용자가 입력한 값을 GET 방식으로 (위의 action 사이트인 input.jsp)에 전달한다.
+    value 속성을 지정하지 않으면 버튼은 쿼리전송(default 값)이 된다.-->
+    <hr />
+    <!-- input 버튼: input type="button"으로 기본적인 버튼을 생성한다.-->
+    물품가격: <input type="text" name="user"> <br />
+    수량: <input type="text" name="user"> 
+    <input type="button" value="계산" onclick="alert('OOO원입니다.')">
+    <hr />
+     <!-- onclick은 '버튼 클릭시'라는 뜻이다.-->
+    <!-- 버튼은 button 태그로도 정의 가능하며, 텍스트나 이미지 같은 컨텐츠를 넣을 수 있다.-->
+    <!-- 이미지 버튼 작성의 2가지 방법
+    1. <button type="submit"> <img src="submit.png"> </button>
+    2. <input type="image" src="submit.png" alt ="제출 버튼"> 과 같이 작성할 수 있다. 여기서  submit.png는 이미지 저장 이름이니까 임의로 설정한 단어고 사진 가져올땐 사진 파일명 가져와야함. -->
+
+    <!-- 이외 여러가지 입력 태그들-->
+    고객의 의견<br />
+    <textarea name="feedback" rows="5" cols="50"></textarea> <!-- textarea는 여러 줄의 텍스트를 입력받을 때 사용하는 태그이다.-->
+    <hr />
+    <select name="food"> <!-- select 요소는 메뉴를 표시하고 사용자로 하여금 선택하게 하는 옵션이다.-->
+        <option value="chicken">치킨</option> <!-- option 요소는 반드시 value 속성을 가지고 있어야 한다.-->
+        <option value="pizza">피자 </option>
+        <option value="jjangae">중국집</option>
+    </select>
+    <hr />
+    <fieldset> <!-- 입력요소를 그룹핑하는 데 사용되는 태그, fieldset 요소 안에는 다양한 입력 요소를 넣을 수 있으며, 그룹의 경계에 선을 그려준다. 또 그룹에 제목을 붙일 수도 있다.-->
+        <legend>인적사항입력</legend>
+        이름:     <input type="text"><br>
+        전화번호: <input type="text"><br>
+        주소:     <input type="text">
+    </fieldset>
+    <hr />
+    <label for="male">남성</label> <!-- label 태그는 속성 for를 사용하여 레이블과 input의 요소를 서로 연결할 수 있다.-->
+    <!-- 특히 마우스 사용자에게 편리한데, 마우스로 <label>을 클릭해도 <input>요소를 클릭한 것과 똑같은 효과를 낸다.-->
+    <input type="radio" name="gender" id="male" value="male"><br>
+    <label for="female">여성</label>
+    <input type="radio" name="gender" id="female" value="female"><br>
+    <input type ="submit" value="제출"> 
+    <hr />
+    </form>
+    <form enctype="multipart/from-data"></form>
+    <!-- 파일 업로드 버튼-->
+    <input type="file"  accept="image/jpg, image/gif"> 
+    <!-- 사용자가 파일을 선택해서 서버로 업로드하는 경우 유용-->
+    <!-- form 태그에 속성으로 enctype"multi-part/from-data"를 추가해주면 파일을 올바르게 업로드하여 준다.-->
+    <!--input  태그의 accept 속성은 업로드시킬 파일의 MIME 타입을 브라우저에 알려준다.-->
+  </form>
+</body>   
+</html>
