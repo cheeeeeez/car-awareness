@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> HTML5 입력 요소</title>
+    </head>
+    <body>
+        검색: <input type="search" name="search"> <!-- 검색에는 여러 종류가 있으므로, 검색을 위한 입력 양식이 하나의 타입이 되어도 됨.-->
+        <input type="submit" value="검색"><br>
+        이메일: <input type="email" name="email" required><br>
+        <!-- required은 입력 양식을 제출하기 전에 반드시 채워져 있어야 함을 나타낸다.-->
+        <hr />
+        URL: <input type="url" name="url" required><br>
+        <!-- 브라우저는 입력된 주소에 대하여 약간의 검증 작업을 한다. required 속성 설정시 검증 가능-->
+        전화번호: <!-- 전화번호의 타입이 여러개라 각 4개씩 3번의 반복을 통한 검증을 실시하기 위한 패턴 코드 작성-->
+        <!-- 입력 검증을 하려면 반드시 title에 올바른 입력 형태를 지정해야 한다.-->
+        <input type="tel" name="tel" required
+        pattern="[0-9] {4}-[0-9] {4}-[0-9] {4}"
+        title="####-####-####"><br>
+        <input type="submit" />
+        <hr />
+        신발사이즈 <input type="number" min="230" max="290"
+        step ="10" value="260" name="shoesize"><br>
+        <hr /><!--초기값을 260으로 설정하고 변경가능-->
+        <!-- 타입을 number로 지정하면 정수를 입력받을 수 있고, 브라우저에 따라 다르게 표시된다. -->
+        <!-- 날짜 - 인터넷에서 자주 사용하는 작업으로 HTML5은 브라우저 자체가 날짜를 선택하는 픽커 기능 내장-->
+        <!-- 
+            1.date: 날짜 입력
+            2.month: 월 입력
+            3.week: 주 입력
+            4.time: 시간 입력
+            5.datetime: 날짜와 시간을 입력할 수 있는 양식 제공, 국제 표준 시간대
+            6.datetime-local: 날짜와 시간을 입력할 수 있는 양식 제공, 지역 표준 시간대
+        -->
+        날짜 설정 <input type="date" name="dob"><br>
+        <!-- min="1990-01-01" max="2030-02-03"과 같이 사용하면 특정 기간에서만 사용자가 날짜를 선택할 수 있도록 강제할 수 있다. -->
+        <hr />
+        시작시간 <input type="time" name="start-time"><br> <!-- 시간을 입력할 수 있는 요소-->
+        <hr />
+        <h3> 이메일 전송화면 </h3> <!--이메일 전송화면 예제-->
+        <form action="MAILTO:gildong123@gmail.com" method="post" enctype="text/plain">
+        이름:<input type="text" name="name" value=""><br>
+        이메일 주소:<input type="email" name="mail" value=""><br>
+        내용:<br>
+        <textarea name="comment" rows="5" cols="70"> </textarea><br>
+        <input type="submit" value="Send" />
+        <input type="reset" value="Reset" />
+         </form>
+    </body>
+</html>
