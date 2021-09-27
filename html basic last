@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- HTML 요소에는 블록 요소와 인라인 요소가 있다. 블록 요소는 요소를 화면에 표시한 후 줄 바꿈이 일어나고,
+인라인 요소는 요소를 표시한 후 줄 바꿈이 일어나지 않는다. <img>요소는 인라인 요소이다.-->
+<html>
+    <head>
+        <title>html 활용 마지막</title>     
+    </head>
+    <body>
+        <img src="aa.jpg" alt="사진이 없네" width="300" height="200"><br>
+        <!--  img 태그는 이미지를 웹 페이지에 삽입할 때 사용한다.-->
+        <!-- src 속성은 이미지 파일 이름을 지정한다.-->
+        <!-- width, height 속성은 각각 이미지의 가로, 세로 크기를 나타낸다.--->
+        <!-- alt 속성은 이미지를 화면에 표시하지 못할 시, 표시되는 대체 텍스트이다.-->
+        <!-- img 태그는 다른 태그들과 달리 서버로부터 다운로드를 받아야 한다.-->
+        <hr />
+        <table border="1"> <!-- 경계 설정은 border 속성을 통해 설정한다.-->
+            <tr>
+                <td> 국어</td>
+                <td> 90</td>
+            </tr>
+            <tr>
+                <td> 수학 </td>
+                <td> 100</td>
+            </tr>
+        </table>
+        <hr />
+
+        <!-- 열과 행 병합 예제-->
+        <table border="3"> <!--테이블의 제목 삽입-->
+                열과 행 병합 예제
+            </caption>
+        <tr>
+            <th>1열</th> <!--th로 입력하면 굵은 글씨로 중앙에 표시된다.--->
+            <th>2열</th>
+            <th>3열</th>
+        </tr>
+        <tr>
+            <td rowspan="2">1행1열</td>
+            <td>1행 2열</td>
+            <td>1행 3열</td>
+        </tr>
+        <tr>
+            <td>2행 2열</td>
+            <td>2행 3열</td>
+        </tr>
+        <tr>
+            <td colspan="3">3행 1열</td>
+        </tr>
+        </table><br>
+        <hr />
+        <!-- th는 table header, tr은 table row, td는 table data의 약자이다.-->
+
+        <h2> 오디오 </h2>
+        <audio src="박효신(Park Hyo Shin) - (The Man Who Laughs) 웃는 남자 풀버전(Full ver.).mp3" autoplay controls>
+            <!-- 오디오 파일의 위치는 src 속성으로 지정한다.
+            autoplay 속성에 의하여 자동으로 재생을 시작한다.
+            controls 속성에 의하여 제어기가 화면에 나타난다.-->
+            Your browser does not support the audio element. <!-- 재생 불가시 나타나는 문구-->
+
+        <!-- 추가로 알아두면 좋은 요소들
+        1.loop: 이 속성이 존재하면 브라우저가 오디오를 반복하여 재생한다.
+        2.preload: 사용자가 사용할 생각이 없더라도 오디오를 미리 다운로드한다.
+        3.src:재생할 오디오가 존재하는 URL을 지정한다.
+        4.volume:오디오의 재생 볼륨을 설정한다.-->
+        </audio>
+        <hr />
+        <!-- iframe 이해하기-->
+        <iframe src="inner.html" width="300" height="120"></iframe> <br>
+        <hr />
+        <!-- iframe은 웹 페이지 안에서 다른 웹 페이지를 표시하고자 할때, 사용된다.
+        위의 코드에
+    <html>
+    <head>
+        <title>INNER</title>
+    </head>
+    <body>
+        <h1>이 웹페이지는 iframe 방식으로 표시됩니다.</h1>
+    </body>
+    </html>
+     이 코드를 다른 파일로 만들어 놓으면 화면을 출력할 수 있다.-->
+     <iframe src="inner.html" width="300" height="200" seamless></iframe>
+     <!-- seamless를 설정하면 경계선 없이 문서의 일부인 것처럼 출력된다.-->
+     <!-- <div>와 <span>을 이용한 예제-->
+         <div style="border: 3px solid red;"><!--하나의 블록 수준의 섹션을 생성하고 여기에 경계선을 설정하였다.-->
+        <h2>사자</h2>
+    <p>
+        사자는 아프리카에 살며
+        강한 다리와 턱,
+        <span style="color:red;">긴 송곳니</span>를 <!--span으로 인라인 수준의 섹션을 생성하고 글자의 색상을 변경하였다.-->
+        지니고 있다.
+    </p></div>
+
+
+
+    </body>
+</html>
