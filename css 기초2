@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- css는 기본적으로 16진수로 색상을 나타낸다.-->
+<html>
+    <head>
+        <title> css 색상</title>
+    </head>
+     <body>
+         <!-- #ff0000 와 같이 표현, 첫 두 ff는 red, 중간의 00은 green, 끝 00은 blue이다.
+        255는 가장 높은 값(ff)이고, 0은 가장 낮은 값(00)이므로 이것을 합친 색상은 빨간색-->       
+     </body>
+     <!-- 간단한 컬러 차트 작성-->
+     <style>
+         h1{ background-color: #6495ed }
+         p.a { background-color: #ff0000 }
+     </style>
+     <body>
+         <h1> CSS Color Chart</h1>
+         <p class="a"> Color #1</p>
+     </body>
+     <!-- 폰트: 페이지의 디자인에 절대적인 영향을 준다.
+    font: 한 줄에서 모든 폰트 속성을 설정할 때 사용
+    font-family: 폰트 패밀리 설정  font-size: 폰트의 크기 설정
+    font-style: 폰트 스타일 설정   font-weight: 폰트의 볼드체 여부 설정-->
+
+    <!-- 웹 서버에 저장된 폰트를 가져오기
+     -> 사용자의 컴퓨터를 제어할 수 없기 때문에 특정 폰트를 웹 폰트를 사용하여 웹 서버에 저장해서 가져오는 것이다.-->
+    <style>
+        @font-face {
+            font-family: "Vera Serif Bold"; 
+            src: url("http://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
+        }
+    
+    body {
+        font-family: "Times New Roman", Times, serif;
+    }
+</style>
+      <!-- 1. 'Times New Roman'부분: 이 폰트가 사용자의 컴퓨터에 설치되어 있는지 체크, 설치되어 있음 이 폰트가 선택된다.
+           2. 'Times New Roman'이 없으면 Times 폰트를 조사한다.
+           3. 'Times' 폰트도 없으면 브라우저가 serif로 간주하는 폰트가 선택된다.-->
+           <body>
+               이것이 모질라에서 제공하는 Vera Serif Bold입니다.
+           </body>
+
+    <!-- 폰트 크기 설정 : 절대 크기, 상대 크기가 있으며, 절대 크기로 설정시 모든 브라우저에서 사용자가 변경 불가능
+         폰트 종류: px단위, %단위, em단위로 설정하기가 있으며 부모 요소를 고려해서 설정하면 된다.-->
+    <style>
+        body { font-size:medium }
+        p#t1 { font-size: 1.0em;}
+        p#t2 { font-size: 1.5em;}
+    </style>
+
+    <body>
+        <p id="t1">paragraph.</p>
+        <p id="t2">paragraph.</p>
+    </body>
+    <!-- 폰트를 축약해서 쓸 수도 있다(1줄로)
+    style, variant, weight, size, family 순으로 작성되며 비워 놓으면 디폴트 값이 사용된다.
+    이 중 size와 family는 필수 요소이다.-->
+    <style>
+        p.style1 {
+            font: italic 30px arial, sans-serif;
+        }
+    </style>
+            <!-- style은 italic, size는 30px, family는 arial, sans-serif-->
+    <body>
+        <p class="style1">font: italic 30px arial, sans-serif</p>
+    </body>
+</html>
